@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "0.0.0",
+  "description": "node",
+  "main": "server.js",
+  "author": {
+    "name": "Derik",
+    "email": ""
+  },
+  "devDependencies": {
+    "express": "^4.2.0",
+    "ejs": "^1.0.0",
+    "body-parser": "^1.2.0",
+    "socket.io": "^0.9.16"
+  }
+}

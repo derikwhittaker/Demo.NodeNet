@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+    <title>Node Index Page</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/style-overrides.css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Realtime w/ Node.js</a>
+            </div>
+            <div class="collapse navbar-collapse">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="starter-template">
+            <div class="col-md-11">
+                <h1>Node Debug Logger</h1>
+            </div>
+            <div class="col-md-1">
+                <input id="clearLogs" type="button" value="Clear Logs"/> 
+            </div>
+        </div>
+        <div id="root" class="row col-md-12">
+            <table data-bind="foreach: logs">
+                <tr>
+                    <td data-bind="text: severity" style="width: 75px;"></td>
+                    <td data-bind="text: message"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div><!-- /.container -->
+
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/underscore.js"></script>
+    <script src="/js/knockout-3.0.0.js"></script>    
+    <script src="/js/bootstrap.js"></script>
+    <script src="/vm/mainViewModel.js"></script>
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+ 	        (function() {
+	            var vm = new client.mainViewModel();
+	            var rootDom = $('#root')[0];
+	
+	            ko.applyBindings(vm, rootDom);
+	        })();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#signIn {
+    display: inline-block;
+}
+
+#playGame {
+    display: none;
+}
+
+.mar-top-5 {
+    margin-top: 5px;
+}
+
+.mar-left-5 {
+    margin-left: 5px;
+}
+
+.correct-answer {
+    background: green;
+    color: white;   
+}
+
+.wrong-answer {
+    background: red;
+    color: white;   
+}
